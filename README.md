@@ -2,7 +2,7 @@
 
 ### Requirements
 - Node.js 18+
-- Docker (setup is handled by the root package.json)
+- Docker (make sure the Docker Application is running on your machine)
 
 ### Setup
 ```bash
@@ -27,4 +27,3 @@ npm run dev
 - Redis was used as the persistence layer due to it's out-of-the-box support for TTL (expiry) and faster response times.
 - The backend was written in Nodejs using the Express framework.
 - The frontend used Reactjs, Tailwincss and, React Query (Tanstack Query).
-- Everything was deplopyed on vercel at - https://pastebin-lite-assignment-app.vercel.app/

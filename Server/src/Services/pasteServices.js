@@ -24,7 +24,7 @@ const createPaste = async (pasteData) => {
         redisResponse = await client.set(`${currentID}`, JSON.stringify(value))
     }
 
-    return {status: 200, "id": currentID, message: `${process.env.BACKEND_URL}/api/pastes/${currentID}`}
+    return {status: 200, "id": currentID, message: `http://localhost:3000/api/pastes/${currentID}`}
 }
 
 // service that fetches a paste with an id

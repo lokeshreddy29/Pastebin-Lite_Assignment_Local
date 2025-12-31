@@ -1,0 +1,13 @@
+{
+  "name": "pastebin-lite",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm:redis\" \"npm:server\" \"npm:client\"",
+    "redis": "docker-compose up",
+    "server": "cd Server && npm install && npm run dev",
+    "client": "cd client && npm install && npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}

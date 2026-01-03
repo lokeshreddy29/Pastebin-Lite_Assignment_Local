@@ -6,8 +6,8 @@
 
 ### Setup
 ```bash
-git clone <repo>
-cd pastebin-lite
+git clone <https://github.com/lokeshreddy29/Pastebin-Lite_Assignment_Local.git>
+cd Pastebin-Lite_Assignment_Local
 npm install
 
 Create a `.env` file inside the `Server` directory with the following contents:
@@ -27,3 +27,4 @@ npm run dev
 - Redis was used as the persistence layer due to it's out-of-the-box support for TTL (expiry) and faster response times.
 - The backend was written in Nodejs using the Express framework.
 - The frontend used Reactjs, Tailwincss and, React Query (Tanstack Query).
+

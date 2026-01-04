@@ -7,18 +7,21 @@
 ### Setup
 ```bash
 Run:
+
 git clone <url>
 cd Pastebin-Lite_Assignment_Local
 npm install
 
 Create a `.env` file inside the `Server` directory with the following contents:
 
-<ins>Copy to .env:</ins>
+Copy to .env:
+
 PORT=3000
 REDIS_URL=redis://localhost:6379
 TEST_MODE=0
 
 Run:
+
 npm run dev
 ```
 
@@ -30,6 +33,7 @@ npm run dev
 - Redis was used as the persistence layer due to it's out-of-the-box support for TTL (expiry) and faster response times.
 - The backend was written in Nodejs using the Express framework.
 - The frontend used Reactjs, Tailwincss and, React Query (Tanstack Query).
+
 
 
 

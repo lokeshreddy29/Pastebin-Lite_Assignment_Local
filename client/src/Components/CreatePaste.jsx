@@ -58,69 +58,75 @@ const CreatePaste = () => {
             <textarea
               name="content"
               id=""
-              className="w-200 min-h-50 p-2 mb-5 bg-bgcontrast outline-0 rounded-md
+              className="min-h-50 p-2 mb-5 bg-bgcontrast outline-0 rounded-md
               transition ease-in-out duration-300 
-            ring-customblue hover:ring focus:ring"
+             ring-customblue hover:ring focus:ring
+              w-75 md:w-85 lg:w-110 2xl:w-200"
               required
             ></textarea>
 
             {/* input fields for ttl and max views */}
 
-            <h1 className="w-200 border-b border-customblue">Paste creation options:</h1>
-            <p className="mt-2 mb-5 text-sm italic">
-              (By default these values will be set to infinite)
-            </p>
+            <div id='paste-creation-section'>
+              <h1 className="w-75 md:w-85 lg:w-110 2xl:w-200 border-b border-customblue">
+                Paste creation options:
+              </h1>
+              <p className="mt-2 mb-5 text-sm italic">
+                (By default these values will be set to infinite)
+              </p>
 
-            {/* ttl input */}
-            <div className="mb-5 w-85 flex justify-between items-center">
-              <div className="w-1/3">
-                <label htmlFor="ttl">Expiry time:</label>
-              </div>
-              <div className="w-2/3 flex items-center gap-x-2 ml-3">
-                <input
-                  name="ttl_seconds"
-                  id="ttl"
-                  type="number"
-                  className="bg-black p-1 w-23 outline-0 rounded-lg 
+              {/* ttl input */}
+              <div className="mb-5 w-85 flex justify-between items-center">
+                <div className="w-1/3">
+                  <label htmlFor="ttl">Expiry time:</label>
+                </div>
+                <div className="w-2/3 flex items-center gap-x-2 ml-3">
+                  <input
+                    name="ttl_seconds"
+                    id="ttl"
+                    type="number"
+                    className="bg-black p-1 w-23 outline-0 rounded-lg 
                   transition ease-in-out duration-300 
                   ring-customblue hover:ring focus:ring"
-                  placeholder="unlimited"
-                  defaultValue={""}
-                />
-                <p>Seconds</p>
+                    placeholder="unlimited"
+                    defaultValue={""}
+                  />
+                  <p>Seconds</p>
+                </div>
               </div>
-            </div>
 
-            {/* max views input */}
-            <div className="mb-5 w-85 flex justify-between items-center">
-              <div className="w-1/3">
-                <label htmlFor="ttl">Views allowed:</label>
-              </div>
-              <div className="w-2/3 flex items-center gap-x-2 ml-3">
-                <input
-                  name="max_views"
-                  id="ttl"
-                  type="number"
-                  className="bg-black p-1 w-23 outline-0 rounded-lg
+              {/* max views input */}
+              <div className="mb-5 w-85 flex justify-between items-center">
+                <div className="w-1/3">
+                  <label htmlFor="ttl">Views allowed:</label>
+                </div>
+                <div className="w-2/3 flex items-center gap-x-2 ml-3">
+                  <input
+                    name="max_views"
+                    id="ttl"
+                    type="number"
+                    className="bg-black p-1 w-23 outline-0 rounded-lg
                   transition ease-in-out duration-300 
                   ring-customblue hover:ring focus:ring"
-                  placeholder="unlimited"
-                  defaultValue={""}
-                />
-                <p>Views</p>
+                    placeholder="unlimited"
+                    defaultValue={""}
+                  />
+                  <p>Views</p>
+                </div>
               </div>
-            </div>
 
-            {/* Submit button */}
-            <div>
-              <button type="submit" className="outline-0 mb-5">
-                Create paste
-              </button>
+              {/* Submit button */}
+              <div>
+                <button type="submit" className="outline-0 mb-5">
+                  Create paste
+                </button>
+              </div>
             </div>
           </form>
         </div>
         {/* // */}
-        <div className="flex gap-x-2 w-200 min-h-10 p-2 rounded-md bg-bgcontrast">
+        <div className="flex gap-x-2 min-h-10 p-2 rounded-md bg-bgcontrast
+        w-75 md:w-85 lg:w-110 2xl:w-200">
           <h1 className="italic">URL:</h1>
           {!isPending ? (<a href={data?.url} className="text-customblue underline 
           transition ease-in-out duration-150 hover:text-blue-600"
